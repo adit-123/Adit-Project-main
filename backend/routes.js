@@ -73,7 +73,8 @@ router.get('/api/download', async (req, res) => {
     
     // Set response headers
     res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    res.setHeader('Content-Disposition', 'attachment; filename=data.xlsx');
+    res.setHeader('Content-Disposition', 'attachment; filename="data.xlsx"');
+
 
     // Send Excel file
     await workbook.xlsx.write(res);
