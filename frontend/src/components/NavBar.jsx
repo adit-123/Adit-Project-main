@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const handleDownload = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/download`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}+"api/download"`, {
         method: 'GET',
       });
       const blob = await response.blob();

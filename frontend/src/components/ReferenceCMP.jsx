@@ -53,10 +53,10 @@ const handleSubmit = async (event) => {
     products, // Pass products array directly as per schema
     reference: referenceForm, // Rename referenceForm to reference
   };
-  console.log(import.meta.env.BACKEND_URL);
+  console.log(import.meta.env.VITE_BACKEND_URL+"");
   
   try {
-    const response = await fetch(`http://localhost:5000/api/submit`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`+"api/submit", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(combinedData),
