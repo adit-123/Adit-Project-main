@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url('./assets/sea-background2.png');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    min-height: 100vh; /* Ensure body covers at least full viewport height */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Keep cover for full background coverage */
+        background-position: center; /* Keep center for mobile */
+        min-height: 100vh; /* Also for mobile */
+    }
+}
